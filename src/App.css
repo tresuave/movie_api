@@ -38,12 +38,12 @@
 }
 nav{
   display:flex;
-  flex-direction: column;
-  /* justify-content: space-around; */
+  flex-direction: row;
+  justify-content: space-around; 
   align-items:center; 
-  height:100vh;
-  width:16.5vw;
-  background: rgb(78, 78, 94);
+  height:10vh;
+  width:100vw;
+  background: rgb(48, 48, 133);
   color: rgb(214, 203, 203);
   box-shadow: 1px 1px 25px .5px rgb(95, 60, 60);
   
@@ -57,14 +57,20 @@ nav{
   list-style: none;
 }
 li{
-  list-style:circle;
+  list-style:none;
 }
 
 .new{
   color: black;
 }
 h1{
-  top:0;
+  top:5vh;
   position:absolute;
-  margin-left: 15vh;
+  margin-left: 20vh;
+}
+h2{
+  top:5vh;
+  position:absolute;
+  margin-left: 20vh;
+  word-wrap: break-word;
 }

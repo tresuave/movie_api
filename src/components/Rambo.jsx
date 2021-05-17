@@ -14,9 +14,9 @@ componentDidMount(){
     .then(json => {
         this.setState({
             isLoaded: true,
-            items: [json.results],
+            items: json.results
         });
-        console.log(json.results[1].title)
+        console.log(json.results)
         
     })
 }
@@ -29,12 +29,11 @@ render() {
         return (
             <div>
                 <ul>
-                 {items.map(item => (
-                        <li key={item} >
-                        {items.results.title}
-                        {items.results.overview}
-
-                        </li>
+                 {this.state.items.map(movie=> (
+                        <h3 key={movie.id} >
+                       Title: {movie.title} | Overview: {movie.overview}
+                       <img src ={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
+                        </h3>
                 ))};
             </ul>
             </div>
